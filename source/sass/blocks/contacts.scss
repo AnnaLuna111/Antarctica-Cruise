@@ -1,0 +1,35 @@
+.contacts {
+  &__container {
+    display: grid;
+    grid-template-columns: 560px 500px;
+    gap: 100px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  #map {
+    height: 306px;
+  }
+
+  &__content {
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 27px;
+    }
+
+    a {
+      display: flex;
+      gap: 10px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

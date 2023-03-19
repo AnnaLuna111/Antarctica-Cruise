@@ -15,9 +15,9 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  line-height: 20px;
+  font-family: $ff-main;
+  color: $color-tangaroa;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -126,4 +126,8 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }

@@ -1,0 +1,29 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  a {
+    color: $color-default-white;
+
+    &:hover,
+    &:focus {
+      color: $color-tangaroa;
+      opacity: 0.6;
+    }
+  }
+
+  &__logo {
+    height: 38px;
+  }
+
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}

@@ -69,3 +69,16 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.hidden-not-mobile {
+  @include vp-768 {
+    display: none;
+  }
+}
