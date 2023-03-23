@@ -1,5 +1,7 @@
 .features {
   position: relative;
+  background-color: $color-pattens-blue;
+  z-index: -2;
 
   img {
     position: absolute;
@@ -13,6 +15,16 @@
   &__container {
     padding-top: 110px;
     padding-bottom: 120px;
+
+    @include vp-1023 {
+      padding-top: 89px;
+      padding-bottom: 100px;
+    }
+
+    @include vp-767 {
+      padding-top: 57px;
+      padding-bottom: 64px;
+    }
   }
 
   h2 {
@@ -22,28 +34,71 @@
     font-weight: 600;
     line-height: 42px;
     text-align: center;
+
+    @include vp-1023 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 36px;
+    }
   }
 
   &__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 
+    @include vp-1023 {
+      gap: 30px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
+
+
     li {
-      width: 360px;
+      width: 100%;
       min-height: 241px;
       padding: 30px;
       background-color: $color-default-white;
+
+      @include vp-1023 {
+        min-width: 206px;
+        min-height: 310px;
+        padding: 26px 20px 10px 16px;
+
+        svg {
+          height: 26px;
+        }
+      }
+
+      @include vp-767 {
+        width: 100%;
+        min-height: 250px;
+        height: 250px;
+        padding-left: 16px;
+      }
     }
 
     h3 {
-      margin: 13px 0 9px;
+      margin: 14px 0 10px;
       font-size: 18px;
       font-weight: 500;
-      line-height: 27px;
+      line-height: 25px;
+
+      @include vp-767 {
+        margin-right: 50px;
+      }
     }
 
     p {
       margin: 0;
+      margin-bottom: 10px;
     }
   }
 }

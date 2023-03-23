@@ -5,10 +5,37 @@
     gap: 100px;
     padding-top: 120px;
     padding-bottom: 120px;
+
+    @include vp-1023 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      gap: 37px;
+      padding-top: 57px;
+      padding-bottom: 65px;
+    }
   }
 
-  #map {
+  &__map {
+    width: 560px;
     height: 306px;
+
+    background-color: $color-quartz;
+
+    @include vp-1023 {
+      width: 100%;
+      height: 335px;
+    }
+
+    @include vp-767 {
+      grid-row: 2/3;
+      height: 316px;
+    }
   }
 
   &__content {
@@ -27,9 +54,23 @@
 
     a {
       display: flex;
+      align-items: center;
       gap: 10px;
       font-size: 16px;
       line-height: 24px;
+
+      svg {
+        min-width: 18px;
+        height: 22px;
+      }
+    }
+
+    @include vp-1023 {
+      gap: 23px;
+    }
+
+    @include vp-767 {
+      gap: 24px;
     }
   }
 }

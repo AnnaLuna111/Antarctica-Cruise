@@ -8,7 +8,7 @@
   color: $color-tangaroa;
 
   background-color: $color-default-white;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
 
 
@@ -22,5 +22,11 @@
     color: $color-default-white;
     background-color: $color-tangaroa;
     opacity: 0.8;
+  }
+
+  &:active {
+    color: $color-default-white;
+    background-color: $color-tangaroa;
+    border-color: $color-default-white;
   }
 }

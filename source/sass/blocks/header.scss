@@ -3,8 +3,11 @@
   width: 100%;
   z-index: 2;
 
+  background-color: transparent;
+
   a {
     color: $color-default-white;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
     &:hover,
     &:focus {
@@ -13,17 +16,153 @@
     }
   }
 
-  &__logo {
-    height: 38px;
-  }
-
-
   &__container {
     display: flex;
     justify-content: space-between;
+    column-gap: 30px;
     align-items: center;
 
     padding-top: 35px;
     padding-bottom: 35px;
+
+    .nav__list {
+      justify-content: flex-end;
+    }
+
+    @include vp-1023 {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @include vp-767 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .header__nav {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    height: 38px;
+    min-width: 70px;
+    align-self: flex-start;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1023 {
+      min-width: 38px;
+      height: 20px;
+    }
+
+    @include vp-767 {
+      width: 42px;
+      height: 22px;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+
+  &__button {
+    position: relative;
+    min-width: 24px;
+    height: 2px;
+    background-color: $color-default-white;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: -6px;
+      left: 0;
+      content: "";
+      width: 24px;
+      height: 2px;
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      top: 6px;
+    }
+  }
+
+  @include vp-767 {
+    &.is-open {
+      position: fixed;
+      top: 0;
+      left: 36px;
+      height: 100vh;
+      width: calc(100% - 36px);
+
+      background-color: $color-default-white;
+
+      a {
+        color: $color-tangaroa;
+        text-shadow: none;
+      }
+
+      .header__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+      }
+
+      .header__toggle {
+        justify-self: end;
+      }
+
+      .header__button {
+        background-color: transparent;
+
+        &::before,
+        &::after {
+          background-color: $color-tangaroa;
+          transform: rotate(45deg);
+          top: 0;
+          left: 8px;
+          width: 80%;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+
+      .header__nav {
+        grid-column: 1/-1;
+        display: block;
+        height: calc(100vh - 75px);
+        overflow: scroll;
+      }
+
+      .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+
+
+        li {
+          width: 100%;
+        }
+      }
+
+      .nav__link {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
   }
 }

@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Круизы в Антарктику | Путешествие
     на край Земли">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/16.png">
     <title>Круизы в Антарктику</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" data-header>
         <div class="header__container container">
           <a class="header__logo" href="index.html">
             <svg aria-hidden="true" focusable="false" width="70" height="38">
@@ -19,23 +25,23 @@
             </svg>
             <span class="visually-hidden">Логотип "Круизы в Антарктику"</span>
           </a>
+          <button class="header__toggle hidden-not-mobile" type="button" data-burger>
+            <span class="visually-hidden">Открыть меню.</span>
+            <span class="header__button"></span>
+          </button>
           <nav class="header__nav nav">
-            <button class="nav__toggle hidden-not-mobile">
-              <span class="visually-hidden">Открыть меню.</span>
-              <span class="nav__button"></span>
-            </button>
             <ul class="nav__list reset-list">
               <li>
-                <a href="#features">Преимущества</a>
+                <a class="nav__link" href="#features" data-close-menu>Преимущества</a>
               </li>
               <li>
-                <a href="#">Направления</a>
+                <a class="nav__link" href="#" data-close-menu>Направления</a>
               </li>
               <li>
-                <a href="#products">Ближайшие круизы</a>
+                <a class="nav__link" href="#products" data-close-menu>Ближайшие круизы</a>
               </li>
               <li>
-                <a href="#contacts">Контакты</a>
+                <a class="nav__link" href="#contacts" data-close-menu>Контакты</a>
               </li>
             </ul>
           </nav>
@@ -51,25 +57,25 @@
           </picture>
           <div class="homescreen__container container">
             <h1>Круизы в&nbsp;Антарктику</h1>
-            <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+            <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
           </div>
         </section>
         <section class="about">
           <div class="about__container container">
             <div class="about__content">
-              <h2>Путешествие на&nbsp;край Земли</h2>
-              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских&nbsp;котиков и&nbsp;многое другое.</p>
+              <h2>Путешествие на&nbsp;край&nbsp;Земли</h2>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
             </div>
             <picture>
               <source type="image/webp" srcset="img/adventure.webp 1x, img/adventure@2x.webp 2x">
-              <img src="img/adventure.jpg" srcset="img/adventure@2x.jpg 2x" alt="Край земли." width="560" height="301">
+              <img src="img/adventure.jpg" srcset="img/adventure@2x.jpg 2x" alt="Край земли." width="560" height="301" loading="lazy">
             </picture>
           </div>
         </section>
         <section class="features" id="features">
           <picture>
             <source type="image/webp" srcset="img/features.webp 1x, img/features@2x.webp 2x">
-            <img src="img/features.jpg" srcset="img/features@2x.jpg 2x" alt="Главный экран." width="1366" height="650">
+            <img src="img/features.jpg" srcset="img/features@2x.jpg 2x" alt="Главный экран." width="1366" height="650" loading="lazy">
           </picture>
           <div class="features__container container">
             <h2>Преимущества</h2>
@@ -78,21 +84,21 @@
                 <svg aria-hidden="true" focusable="false" width="27" height="32">
                   <use href="img/sprite.svg#ship-icon"></use>
                 </svg>
-                <h3>Небольшой круизный лайнер</h3>
+                <h3>Небольшой круизный&nbsp;лайнер</h3>
                 <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
               </li>
               <li>
                 <svg aria-hidden="true" focusable="false" width="38" height="32">
                   <use href="img/sprite.svg#check-icon"></use>
                 </svg>
-                <h3>Система все включено</h3>
-                <p>Все наши круизы работают по&nbsp;системе "Все Включено". Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
+                <h3>Система все&nbsp;включено</h3>
+                <p>Все наши круизы работают по&nbsp;системе "Все Включено". Великолепные блюда и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.</p>
               </li>
               <li>
                 <svg aria-hidden="true" focusable="false" width="44" height="32">
                   <use href="img/sprite.svg#boat-icon"></use>
                 </svg>
-                <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
+                <h3>Экскурсионные туры&nbsp;на&nbsp;Zodiac</h3>
                 <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac c&nbsp;опытными экскурсоводами.</p>
               </li>
             </ul>
@@ -105,7 +111,7 @@
               <li class="products__item">
                 <picture>
                   <source type="image/webp" srcset="img/astoria.webp 1x, img/astoria@2x.webp 2x">
-                  <img src="img/astoria.jpg" srcset="img/astoria@2x.jpg 2x" alt="Круиз Астория." width="473" height="386">
+                  <img src="img/astoria.jpg" srcset="img/astoria@2x.jpg 2x" alt="Круиз Астория." width="473" height="386" loading="lazy">
                 </picture>
                 <div class="products__content">
                   <h3>Круиз "Астория"</h3>
@@ -125,7 +131,7 @@
               <li class="products__item">
                 <picture>
                   <source type="image/webp" srcset="img/aline.webp 1x, img/aline@2x.webp 2x">
-                  <img src="img/aline.jpg" srcset="img/aline@2x.jpg 2x" alt="Круиз Элайн." width="606" height="386">
+                  <img src="img/aline.jpg" srcset="img/aline@2x.jpg 2x" alt="Круиз Элайн." width="606" height="386" loading="lazy">
                 </picture>
                 <div class="products__content">
                   <h3>Круиз "Элайн"</h3>
@@ -145,7 +151,7 @@
               <li class="products__item">
                 <picture>
                   <source type="image/webp" srcset="img/atlantic.webp 1x, img/atlantic@2x.webp 2x">
-                  <img src="img/atlantic.jpg" srcset="img/atlantic@2x.jpg 2x" alt="Круиз Атлантис." width="47" height="386">
+                  <img src="img/atlantic.jpg" srcset="img/atlantic@2x.jpg 2x" alt="Круиз Атлантис." width="47" height="386" loading="lazy">
                 </picture>
                 <div class="products__content">
                   <h3>Круиз "Атлантис"</h3>
@@ -165,7 +171,7 @@
               <li class="products__item">
                 <picture>
                   <source type="image/webp" srcset="img/odyssey.webp 1x, img/odyssey@2x.webp 2x">
-                  <img src="img/odyssey.jpg" srcset="img/odyssey@2x.jpg 2x" alt="Круиз Одиссей." width="478" height="386">
+                  <img src="img/odyssey.jpg" srcset="img/odyssey@2x.jpg 2x" alt="Круиз Одиссей." width="478" height="386" loading="lazy">
                 </picture>
                 <div class="products__content">
                   <h3>Круиз "Одиссей"</h3>
@@ -185,7 +191,7 @@
               <li class="products__item">
                 <picture>
                   <source type="image/webp" srcset="img/olympiya.webp 1x, img/olympiya@2x.webp 2x">
-                  <img src="img/olympiya.jpg" srcset="img/olympiya@2x.jpg 2x" alt="Круиз Олимпия." width="515" height="386">
+                  <img src="img/olympiya.jpg" srcset="img/olympiya@2x.jpg 2x" alt="Круиз Олимпия." width="515" height="386" loading="lazy">
                 </picture>
                 <div class="products__content">
                   <h3>Круиз "Олимпия"</h3>
@@ -205,7 +211,7 @@
               <li class="products__item">
                 <picture>
                   <source type="image/webp" srcset="img/aurora.webp 1x, img/aurora@2x.webp 2x">
-                  <img src="img/aurora.jpg" srcset="img/aurora@2x.jpg 2x" alt="Круиз Аврора." width="475" height="386">
+                  <img src="img/aurora.jpg" srcset="img/aurora@2x.jpg 2x" alt="Круиз Аврора." width="475" height="386" loading="lazy">
                 </picture>
                 <div class="products__content">
                   <h3>Круиз "Аврора"</h3>
@@ -225,7 +231,7 @@
               <li class="products__item">
                 <picture>
                   <source type="image/webp" srcset="img/leonor.webp 1x, img/leonor@2x.webp 2x">
-                  <img src="img/leonor.jpg" srcset="img/leonor@2x.jpg 2x" alt="Круиз Леонор." width="503" height="386">
+                  <img src="img/leonor.jpg" srcset="img/leonor@2x.jpg 2x" alt="Круиз Леонор." width="503" height="386" loading="lazy">
                 </picture>
                 <div class="products__content">
                   <h3>Круиз "Леонор"</h3>
@@ -245,7 +251,7 @@
               <li class="products__item">
                 <picture>
                   <source type="image/webp" srcset="img/minion.webp 1x, img/minion@2x.webp 2x">
-                  <img src="img/minion.jpg" srcset="img/minion@2x.jpg 2x" alt="Круиз Минион-1." width="1366" height="555">
+                  <img src="img/minion.jpg" srcset="img/minion@2x.jpg 2x" alt="Круиз Минион-1." width="1366" height="555" loading="lazy">
                 </picture>
                 <div class="products__content">
                   <h3>Круиз "Минион - 1"</h3>
@@ -268,15 +274,15 @@
         <section class="feedback">
           <picture>
             <source type="image/webp" srcset="img/booking.webp 1x, img/booking@2x.webp 2x">
-            <img src="img/booking.jpg" srcset="img/booking@2x.jpg 2x" alt="Круиз Минион-1." width="506" height="386">
+            <img src="img/booking.jpg" srcset="img/booking@2x.jpg 2x" alt="Круиз Минион-1." width="506" height="386" loading="lazy">
           </picture>
           <div class="feedback__container container">
             <div class="feedback__content">
               <h2>Раннее бронирование</h2>
-              <p>Забронируйте тур за&nbsp;3-6 месяцев<br> до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+              <p>Забронируйте тур за&nbsp;3-6&nbsp;месяцев до&nbsp;даты&nbsp;выезда и&nbsp;сэкономьте до&nbsp;50%</p>
             </div>
             <div class="feedback__form" dara-form-validate data-form-validate data-callback="base">
-              <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+              <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее время</p>
               <form action="" method="post">
                 <label data-validate-type="text" data-limitation="cyrillic" data-required data-message-base="Поле обязательно к заполнению">
                   <input type="text" name="name" id="name" placeholder="Имя" minlength="2" required>
@@ -289,7 +295,7 @@
                 </label>
                 <label  data-validate-type="checkbox" data-required data-message-base="Поле обязательно к заполнению">
                   <input type="checkbox" checked>
-                  <span>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                  <span>Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных данных</span>
                 </label>
                 <button class="feedback__button btn" type="submit">Оставить заявку</button>
               </form>
@@ -298,16 +304,16 @@
         </section>
         <section class="contacts" id="contacts">
           <div class="contacts__container container">
-            <div id="map"></div>
+            <div class="contacts__map" id="map"></div>
             <div class="contacts__content">
               <p>
-                У&nbsp;вас ещё остались вопросы или сомнения?<br> Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.
+                У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.
               </p>
               <a href="#map">
                 <svg aria-hidden="true" focusable="false" width="18" height="22">
                   <use href="img/sprite.svg#pin-icon"></use>
                 </svg>
-                <span>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</span>
+                <span>г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8</span>
               </a>
               <a href="tel:88002000000">
                 <svg aria-hidden="true" focusable="false" width="18" height="18">
@@ -330,21 +336,21 @@
             </a>
             <ul class="nav__list reset-list">
               <li>
-                <a href="#features">Преимущества</a>
+                <a class="nav__link" href="#features">Преимущества</a>
               </li>
               <li>
-                <a href="#">Направления</a>
+                <a class="nav__link" href="#">Направления</a>
               </li>
               <li>
-                <a href="#products">Ближайшие круизы</a>
+                <a class="nav__link" href="#products">Ближайшие круизы</a>
               </li>
               <li>
-                <a href="#contacts">Контакты</a>
+                <a class="nav__link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
           <ul class="footer__socials reset-list">
-            <li> <!--37/32-->
+            <li>
               <a href="#">
                 <svg aria-hidden="true" focusable="false" width="12" height="20">
                   <use href="img/sprite.svg#ok-icon"></use>
@@ -352,7 +358,7 @@
                 <span class="visually-hidden">Одноклассники.</span>
               </a>
             </li>
-            <li> <!--37/32-->
+            <li>
               <a href="#">
                 <svg aria-hidden="true" focusable="false" width="20" height="20">
                   <use href="img/sprite.svg#zen-icon"></use>
@@ -360,7 +366,7 @@
                 <span class="visually-hidden">Дзен.</span>
               </a>
             </li>
-            <li> <!--37/32-->
+            <li>
               <a href="#">
                 <svg aria-hidden="true" focusable="false" width="20" height="20">
                   <use href="img/sprite.svg#reddit-icon"></use>
