@@ -163,6 +163,10 @@
         font-size: 18px;
         line-height: 22px;
       }
+
+      & ~ main {
+        background-color: rgba(0, 43, 102, 0.5);
+      }
     }
   }
 }

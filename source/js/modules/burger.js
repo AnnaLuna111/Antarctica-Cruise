@@ -28,7 +28,7 @@ export class Burger {
     this._scrollLock.disableScrolling();
     document.addEventListener('keydown', this._onDocumentKeydown);
     document.addEventListener('click', this._onDocumentClick);
-    this._focusLock.lock('[data-header]');
+    this._focusLock.lock('[data-header]', false);
     if (window.ls) {
       window.ls.stop();
     }
