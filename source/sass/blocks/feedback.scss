@@ -13,14 +13,13 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 493px 403px;
-    gap: 144px;
+    grid-template-columns: 1fr 1fr;
+    gap: 43px;
     padding: 50px 100px;
 
     @include vp-1023 {
       grid-template-columns: 1fr;
       justify-items: center;
-      gap: 43px;
       padding: 87px 174px 100px;
     }
 
@@ -83,7 +82,10 @@
   }
 
   &__form {
-    width: 100%;
+    justify-self: end;
+
+    min-width: 403px;
+    width: 403px;
     padding: 43px 50px 50px;
     background-color: $color-tangaroa;
     box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
@@ -171,10 +173,11 @@
     }
 
     @include vp-1023 {
-      width: 403px;
+      justify-self: center;
     }
 
     @include vp-767 {
+      min-width: 100%;
       width: 100%;
       padding: 34px 30px 40px;
 
