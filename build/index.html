@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Круизы в Антарктику | Путешествие
     на край Земли">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -53,7 +53,7 @@
             <source media="(max-width: 1023px)" type="image/webp" srcset="img/homescreen-tablet.webp 1x, img/homescreen-tablet@2x.webp 2x">
             <source media="(max-width: 1023px)" type="image/jpeg" srcset="img/homescreen-tablet.jpg 1x, img/homescreen-tablet@2x.jpg 2x">
             <source type="image/webp" srcset="img/homescreen.webp 1x, img/homescreen@2x.webp 2x">
-            <img class="product__image" src="img/homescreen.jpg" srcset="img/homescreen@2x.jpg 2x" alt="Главный экран." width="1366" height="650">
+            <img src="img/homescreen.jpg" srcset="img/homescreen@2x.jpg 2x" alt="Главный экран." width="1366" height="650">
           </picture>
           <div class="homescreen__container container">
             <h1>Круизы в&nbsp;Антарктику</h1>
@@ -281,9 +281,9 @@
               <h2>Раннее бронирование</h2>
               <p>Забронируйте тур за&nbsp;3-6&nbsp;месяцев до&nbsp;даты&nbsp;выезда и&nbsp;сэкономьте до&nbsp;50%</p>
             </div>
-            <div class="feedback__form" dara-form-validate data-form-validate data-callback="base">
+            <div class="feedback__form" data-form-validate data-callback="base">
               <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее время</p>
-              <form action="" method="post">
+              <form action="https://echo.htmlacademy.ru" method="post">
                 <label data-validate-type="text" data-limitation="cyrillic" data-required data-message-base="Поле обязательно к заполнению">
                   <input type="text" name="name" id="name" placeholder="Имя" minlength="2" required>
                 </label>
@@ -303,6 +303,7 @@
           </div>
         </section>
         <section class="contacts" id="contacts">
+          <h2 class="visually-hidden">Свяжитесь с нами.</h2>
           <div class="contacts__container container">
             <div class="contacts__map" id="map"></div>
             <div class="contacts__content">
