@@ -13,7 +13,7 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 50px;
     padding-bottom: 45px;
 
@@ -84,8 +84,10 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 9px;
+    margin-top: 4px;
     margin-right: -8px;
     max-width: 200px;
+    min-width: 130px;
 
     li {
       width: 37px;

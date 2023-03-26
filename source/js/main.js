@@ -23,7 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-    initMap({
+
+    setTimeout(initMap({
       id: 'map',
       initials: {
         center: [59.9387165, 30.3230474],
@@ -41,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
           iconShadow: false,
         }
       ],
-    });
+    }), 5000);
   });
 });
 
