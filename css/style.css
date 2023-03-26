@@ -1047,6 +1047,7 @@ button,
 .feedback__content p {
   margin: 0;
   margin-bottom: 10px;
+  width: 360px;
   font-size: 18px;
   line-height: 27px;
 }
@@ -1054,6 +1055,9 @@ button,
 .feedback__form {
   -ms-grid-column-align: end;
   justify-self: end;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
   min-width: 403px;
   width: 403px;
   padding: 43px 50px 50px;
@@ -1090,6 +1094,8 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .feedback__form input:not([type=checkbox]) {
@@ -1115,6 +1121,11 @@ button,
 
 .feedback__form input:not([type=checkbox])::placeholder {
   color: rgba(1, 28, 64, 0.7);
+}
+
+.feedback__form input:not([type=checkbox]):hover,
+.feedback__form input:not([type=checkbox]):focus {
+  background-color: #badefb;
 }
 
 .feedback__form input[type=checkbox] {
@@ -1256,9 +1267,9 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   padding-top: 50px;
   padding-bottom: 45px;
 }
@@ -1295,8 +1306,10 @@ button,
   -ms-flex-pack: end;
   justify-content: flex-end;
   gap: 9px;
+  margin-top: 4px;
   margin-right: -8px;
   max-width: 200px;
+  min-width: 130px;
 }
 
 .footer__socials li {
@@ -1329,6 +1342,7 @@ button,
   font-weight: 600;
   line-height: 21px;
   color: #011c40;
+  text-align: center;
   background-color: #f9fbfd;
   border: 1px solid transparent;
   cursor: pointer;
@@ -1770,6 +1784,7 @@ button,
   }
 
   .feedback__content p {
+    width: 100%;
     font-size: 16px;
     line-height: 22px;
     opacity: 0.24;
