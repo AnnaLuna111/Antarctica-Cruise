@@ -1256,6 +1256,10 @@ button,
   height: 22px;
 }
 
+.contacts__content a:hover {
+  opacity: 0.6;
+}
+
 .footer {
   background-color: #011c40;
 }
@@ -1582,6 +1586,7 @@ button,
 
   .footer__nav {
     gap: 25px;
+    padding-top: 6px;
   }
 
   .footer__nav a {
@@ -1596,6 +1601,7 @@ button,
 
   .footer__socials {
     gap: 0;
+    margin-top: 0;
     margin-right: -11px;
   }
 
@@ -1755,6 +1761,7 @@ button,
     width: 100%;
     min-height: 250px;
     padding-left: 16px;
+    padding-bottom: 9px;
   }
 
   .features__list h3 {
@@ -1872,6 +1879,7 @@ button,
     -ms-flex-align: start;
     align-items: flex-start;
     gap: 24px;
+    padding: 0;
   }
 
   .footer__nav ul {
