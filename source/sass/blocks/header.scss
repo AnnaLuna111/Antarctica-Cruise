@@ -11,7 +11,7 @@
 
     &:hover,
     &:focus {
-      color: $color-tangaroa;
+      color: $color-pale-cornflower-blue;
       opacity: 0.6;
     }
   }
@@ -166,6 +166,10 @@
 
       & ~ main {
         background-color: rgba(0, 43, 102, 0.5);
+
+        & > .about img {
+          opacity: 0.5;
+        }
       }
     }
   }
