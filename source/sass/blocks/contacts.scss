@@ -64,6 +64,10 @@
         min-width: 18px;
         height: 22px;
       }
+
+      &:hover {
+        opacity: 0.6;
+      }
     }
 
     @include vp-1023 {
